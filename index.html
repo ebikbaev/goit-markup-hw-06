@@ -455,17 +455,58 @@
             </li>
           </ul>
         </div>
-      </div>
-    </footer>
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal-window">
-          <button class="close-modal defolt-btn" data-modal-close>
-            <svg width="8" height="8">
-              <use href="./images/symbol-defs.svg#icon-close"></use>
+
+        <form class="footer-form">
+          <div>
+            <label for="email" class="label-text"> Subscribe </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="footer-form-imput"
+            />
+          </div>
+          <button type="Subscribe" class="form-button defolt-btn">
+            Subscribe
+            <svg width="24" height="24" class="form-svg">
+              <use href="./images/symbol-defs.svg#icon-footer-button"></use>
             </svg>
           </button>
-        </div>
+        </form>
       </div>
+    </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <form class="modal-form">
+          <h2 class="modal-title">
+            Leave your contacts and we will call you back
+          </h2>
+          <label for="name">
+            Name
+            <input type="text" name="username" id="name" />
+          </label>
+          <label for="tel">
+            Phone
+            <input type="tel" name="phone_number" id="tel" />
+          </label>
+          <label for="memail">
+            Email
+            <input type="email" name="email" id="memail" />
+          </label>
+          Comment
+          <label for="comment">
+            <input type="text" name="comment" id="comment" />
+          </label>
+        </form>
+        <button class="close-modal defolt-btn" data-modal-close>
+          <svg width="8" height="8">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
