@@ -479,25 +479,89 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <form class="modal-form">
-          <h2 class="modal-title">
+          <p class="modal-title">
             Leave your contacts and we will call you back
-          </h2>
-          <label for="name">
-            Name
-            <input type="text" name="username" id="name" />
-          </label>
-          <label for="tel">
-            Phone
-            <input type="tel" name="phone_number" id="tel" />
-          </label>
-          <label for="memail">
-            Email
-            <input type="email" name="email" id="memail" />
-          </label>
-          Comment
-          <label for="comment">
-            <input type="text" name="comment" id="comment" />
-          </label>
+          </p>
+          <div class="form-field">
+            <label for="name"> Name </label>
+            <div class="modal-input-wrap">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="modal-form-input"
+                required
+              />
+              <svg width="18" height="18" class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <div class="modal-input-wrap">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="modal-form-input"
+                required
+              />
+
+              <svg width="18" height="18" class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="name">Email</label>
+            <div class="modal-input-wrap">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="modal-form-input"
+                required
+              />
+
+              <svg width="18" height="18" class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="comment"> Comment</label>
+            <textarea class="comment-area"
+              name="comment"
+              id="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="modal-privacy-wrapper">
+            <input
+              type="checkbox"
+              name="privacy"
+              id="privacy"
+              class="modal-privacy-checkbox"
+              value="true"
+            />
+            <label for="privacy" class="privacy-label">
+              <span class="visual-checkbox">
+                <svg class="privacy-checkbox" width="10" height="8">
+                  <use
+                    href="./images/symbol-defs.svg#icon-visual-checkbox"
+                  ></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;
+              <a href="#" class="privacy-link link">Privacy Policy</a></label
+            >
+          </div>
+          <div class="modal-button-wrapper">
+            <button type="submit" class="modal-button-wp defolt-btn">
+              Send
+            </button>
+          </div>
         </form>
         <button class="close-modal defolt-btn" data-modal-close>
           <svg width="8" height="8">

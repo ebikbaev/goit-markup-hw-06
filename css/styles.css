@@ -10,6 +10,7 @@
   --green: #31d0aa;
   --cloud: #d9d9d9;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --brown: #2e2e2e;
 }
 /* ------------------------------------------------- инструменты------------------------------------------------------------ */
 h1,
@@ -710,14 +711,160 @@ body {
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
 }
+.modal-form {
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 72px;
+}
 .modal-title {
+  margin-bottom: 16px;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
-.modal-form
-{
-  display: block;
+.form-field {
+  margin-bottom: 8px;
+}
+.modal-input-wrap {
+  position: relative;
+  width: 100%;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+.modal-form-input {
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  outline: transparent;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+.form-field input:focus {
+  border-color: var(--iris);
+}
+.modal-form-input:focus + .modal-icon {
+  fill: var(--iris);
+}
+.comment-area {
+  resize: none;
+  padding-top: 8px;
+  padding-left: 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  outline: transparent;
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-delay: var(--base-anim);
+}
+.comment-area::placeholder {
+  font-size: 12px;
+  line-height: 1, 17;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.comment-area:focus {
+  color: var(--brown);
+  border-color: var(--iris);
+}
+.form-field label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+.modal-privacy-wrapper {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+.modal-privacy-checkbox {
+  appearance: none;
+}
+
+.visual-checkbox {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  fill: transparent;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--base-anim);
+}
+
+.modal-privacy-checkbox:checked + .privacy-label span {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+}
+
+.privacy-label {
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.privacy-link {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--iris);
+}
+.modal-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.modal-button-wp {
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  background-color: var(--iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--base-anim);
+}
+.modal-button-wp:hover,
+.modal-button-wp:focus {
+  background-color: var(--ocean);
 }
