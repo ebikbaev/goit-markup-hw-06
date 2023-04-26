@@ -660,9 +660,15 @@ body {
 }
 
 .footer-form {
-  margin-left: 80px;
   display: flex;
+  align-items: center;
+ 
+  
 }
+.footer-form-position {
+  margin-left: 80px;
+}
+
 .form-button {
   display: flex;
   flex-direction: row;
@@ -681,7 +687,7 @@ body {
   background-color: var(--iris);
   border-radius: 4px;
   border-color: transparent;
-  margin-top: 40px;
+
   transition-property: background-color;
   transition-duration: 2500ms;
   transition-timing-function: var(--cubic-bezier);
@@ -699,6 +705,7 @@ body {
   background-color: var(--navy-blue);
 }
 .label-text {
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -708,8 +715,9 @@ body {
   color: var(--white);
 }
 .footer-form-imput {
+  color:var(--white);
+  padding-left: 16px;
   margin-right: 24px;
-  margin-top: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -736,8 +744,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
-.form-field {
-  margin-bottom: 8px;
+
+.form-field label {
+  display: block;
 }
 .modal-input-wrap {
   position: relative;
@@ -747,6 +756,7 @@ body {
   position: absolute;
   top: 50%;
   left: 16px;
+  fill: var(--navy-blue);
   transform: translateY(-50%);
   transition-property: fill;
   transition-duration: 250ms;
@@ -773,6 +783,7 @@ body {
   fill: var(--iris);
 }
 .comment-area {
+  display: block;
   resize: none;
   padding-top: 8px;
   padding-left: 16px;
@@ -800,6 +811,7 @@ body {
   border-color: var(--iris);
 }
 .form-field label {
+  margin-top: 8px;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
