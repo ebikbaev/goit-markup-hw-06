@@ -748,6 +748,9 @@ body {
   color: var(--navy-blue);
 }
 
+.form-field{
+  margin-bottom: 8px;
+}
 .form-field label {
   display: block;
 }
@@ -814,7 +817,7 @@ body {
   border-color: var(--iris);
 }
 .form-field label {
-  margin-top: 8px;
+  
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
