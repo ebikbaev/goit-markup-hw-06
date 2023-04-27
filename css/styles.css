@@ -714,6 +714,9 @@ body {
 
   color: var(--white);
 }
+.comment-group{
+  margin-bottom: 16px;
+}
 .footer-form-imput {
   color:var(--white);
   padding-left: 16px;
@@ -820,7 +823,7 @@ body {
   color: var(--light-slate);
 }
 .modal-privacy-wrapper {
-  margin-top: 16px;
+  
   margin-bottom: 24px;
   display: flex;
   align-items: center;
